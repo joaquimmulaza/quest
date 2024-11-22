@@ -135,12 +135,35 @@ body{
     flex-direction: column;
     align-items: start;
     margin-bottom: 40px;
+    width: 328px;
+    margin: 20px 16px auto;
   }
   
   .card {
-    margin-bottom: 20px;
-    padding-right: 16px;
-    overflow: hidden;
+    position: relative;
+    width: 328px;
+    margin: 20px 16px auto;
+    border-bottom: 2px solid #575757; /* Borda padrão */
+    transition: all 0.3s ease; /* Suaviza a transição */
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50%; /* Largura da metade da borda */
+    height: 2px;
+    background-color: transparent; /* Inicialmente invisível */
+  }
+
+
+  .card:active h2{
+    color: #F58220;
+  }
+
+  .card:active::before {
+    background-color: #F58220; /* Cor da metade da borda ao clicar */
   }
   
   .card-image {
@@ -152,7 +175,7 @@ body{
   .card h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #F58220;
+    color: #fff;
     margin-bottom: 10px;
   }
   
@@ -162,6 +185,7 @@ body{
     font-size: 16px;
     width: 328px;
     line-height: 28px;
+    margin-bottom: 28px;
   }
   
   /* Mobile-first approach (small screens) */
