@@ -306,3 +306,103 @@ body{
     width: 24px;
     color: #fff;
 }
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 1%;
+  left: 5%;
+  color: white;
+  justify-content: space-between;
+ gap: 90px;
+  max-width: 80%;
+  height: 661px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.description-slide{
+  border: 1px solid green;
+  height: 330px;
+}
+
+.text-overlay h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text-overlay .highlight {
+  color: #ffc107; /* Cor de destaque */
+}
+
+.text-overlay p {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-overlay .view-more {
+  margin-top: 60px;
+  
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  border: 1px solid #fff;
+  width: 110px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.text-overlay .view-more:hover {
+  background-color: #333;
+}
+
+/* Estilização dos dots */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+}

@@ -77,6 +77,59 @@
           <h2>SPARKPLUS</h2>
           <p>원활한 업무환경을 제공할 수 있는 맞춤형 오피스 빌딩의 입점을 소개하는 특별한 공유 오피스를 만나보세요.</p>
         </div>
+
+        <div class="carousel">
+            <div class="slides">
+              <div class="slide">
+                <img src="./images/img-slide-1.webp" alt="Slide Image">
+                <div class="text-overlay">
+                  <h1>The <span class="highlight">1<sup>st</sup></span> Environment you would imagine</h1>
+                  <div class="description-slide">
+                    <p>서울 청계천은 자연 그대로의 휴식과 재충전 공간이며, 점심시간과 퇴근길에 만나는 청계천의 여유로움은 CENTER1 입주자 및 이용객이 누릴 수 있는 특권입니다.
+                      이용자를 위한 감성적인 요소뿐만 아니라, 국내 최고 수준의 친환경 기준을 실천하여 국내외에서 친환경 건축물로 인증받았습니다.</p>
+                    <button class="view-more">View More</button>
+                </div>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="./images/img-slide-1.webp" alt="Slide Image">
+                <div class="text-overlay">
+                  <h1>The <span class="highlight">1<sup>st</sup></span> Environment you would imagine</h1>
+                  <div class="description-slide">
+                      <p>서울 청계천은 자연 그대로의 휴식과 재충전 공간이며, 점심시간과 퇴근길에 만나는 청계천의 여유로움은 CENTER1 입주자 및 이용객이 누릴 수 있는 특권입니다.
+                        이용자를 위한 감성적인 요소뿐만 아니라, 국내 최고 수준의 친환경 기준을 실천하여 국내외에서 친환경 건축물로 인증받았습니다.</p>
+                      <button class="view-more">View More</button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="./images/img-slide-1.webp" alt="Slide Image">
+                <div class="text-overlay">
+                  <h1>The <span class="highlight">1<sup>st</sup></span> Environment you would imagine</h1>
+                  <div class="description-slide">
+                    <p>서울 청계천은 자연 그대로의 휴식과 재충전 공간이며, 점심시간과 퇴근길에 만나는 청계천의 여유로움은 CENTER1 입주자 및 이용객이 누릴 수 있는 특권입니다.
+                      이용자를 위한 감성적인 요소뿐만 아니라, 국내 최고 수준의 친환경 기준을 실천하여 국내외에서 친환경 건축물로 인증받았습니다.</p>
+                    <button class="view-more">View More</button>
+                </div>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="./images/img-slide-1.webp" alt="Slide Image">
+                <div class="text-overlay">
+                  <h1>The <span class="highlight">1<sup>st</sup></span> Environment you would imagine</h1>
+                  <div class="description-slide">
+                    <p>서울 청계천은 자연 그대로의 휴식과 재충전 공간이며, 점심시간과 퇴근길에 만나는 청계천의 여유로움은 CENTER1 입주자 및 이용객이 누릴 수 있는 특권입니다.
+                      이용자를 위한 감성적인 요소뿐만 아니라, 국내 최고 수준의 친환경 기준을 실천하여 국내외에서 친환경 건축물로 인증받았습니다.</p>
+                    <button class="view-more">View More</button>
+                </div>
+                </div>
+              </div>
+              <!-- Adicione mais slides se necessário -->
+            </div>
+            <div class="dots">
+              
+            </div>
+          </div>
       </section>
 
      <!-- Footer Section -->
@@ -117,6 +170,49 @@
         });
     }
 });
+const slides = document.querySelector('.slides');
+const dotsContainer = document.querySelector('.dots');
+const slideElements = document.querySelectorAll('.slide');
+
+let currentIndex = 0;
+
+// Função para criar os dots dinamicamente
+function createDots() {
+  slideElements.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active'); // Primeiro dot ativo
+    dotsContainer.appendChild(dot);
+
+    // Adiciona evento de clique para navegar nos slides
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+}
+
+// Atualiza o carrossel e os dots
+function updateCarousel() {
+  // Move slides
+  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  // Atualiza os dots
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+// Inicializa os dots e o carrossel
+createDots();
+
+// Opção: Auto-slide (desabilite caso não precise)
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slideElements.length;
+  updateCarousel();
+}, 5000);
+
 
     </script>
 </body>
