@@ -107,7 +107,7 @@ body{
 }
 
 /* Features Section */
-.convenience {
+section {
     max-width: 400px;
     margin: 0 auto;
     padding: 80px 0 0 16px;
@@ -139,6 +139,10 @@ body{
     margin-bottom: 40px;
     width: 328px;
     margin: 20px 16px auto;
+  }
+
+  .card-text p{
+    font-size: 20px;
   }
   
   .card {
@@ -188,6 +192,19 @@ body{
     width: 328px;
     line-height: 28px;
     margin-bottom: 28px;
+  }
+
+  .card-title h1{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .card-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 17px;
   }
   
   /* Mobile-first approach (small screens) */
@@ -335,41 +352,62 @@ body{
 .text-overlay {
   position: absolute;
   bottom: 1%;
-  left: 5%;
+  left: 16px;
+  right: 16px;
   color: white;
   justify-content: space-between;
  gap: 90px;
-  max-width: 80%;
+  
   height: 661px;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   
 }
 
 .description-slide{
-  border: 1px solid green;
-  height: 330px;
+  border-top: 1px solid #bebebe;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: start !important;
+  margin-bottom: 48px;
+}
+
+.description-slide::before{
+  content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 50%; /* Largura da metade da borda */
+    height: 2px;
+    background-color: #fff; /* Inicialmente invisível */
 }
 
 .text-overlay h1 {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  padding-top: 80px;
+}
+
+.highlight img{
+  width: 32px;
+  height: 29px;
 }
 
 .text-overlay .highlight {
-  color: #ffc107; /* Cor de destaque */
+  color: #fff; /* Cor de destaque */
 }
 
 .text-overlay p {
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.5;
+  margin-top:  8px;
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .text-overlay .view-more {
-  margin-top: 60px;
-  
   background-color: transparent;
   color: #fff;
   font-size: 12px;
@@ -388,7 +426,7 @@ body{
 /* Estilização dos dots */
 .dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
