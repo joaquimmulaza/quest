@@ -53,7 +53,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="convenience">
+    <section class="convenience sections">
         <div class="card-text">
             <h1>Convenience</h1>
             <p>미래에셋센터원에서 경험하는</p>
@@ -132,17 +132,92 @@
           </div>
       </section>
 
-      <section>
-        <div class="card-text">
-          <div class="card-title">
-            <h1>ONLY </h1>
-            <img src="./images/logo-center.svg" alt="">
+      <section class="only sections">
+          <div class="card-text">
+            <div class="card-title">
+              <h1>ONLY </h1>
+              <img src="./images/logo-center.svg" alt="">
+            </div>
+            <p>미래에셋센터원에서만 누리는 </p>
+            <span>특별한 혜택</span>
           </div>
-          <p>미래에셋센터원에서만 누리는 </p>
-          <span>특별한 혜택</span>
-      </div>
+
+          <div class="card">
+            <img src="./images/card-mobile-4.png" alt="KF Gallery" class="card-image">
+            <h2>프라임 서비스</h2>
+            <p>임산부 휴게실/수유실 운영, 세차 서비스, 우편 배달 서비스 등 입주사 임직원을 위한 차별화된 서비스를 제공합니다.</p>
+          </div>
+      
+          <div class="card">
+            <img src="./images/card-mobile-5.png" alt="Wellness Center" class="card-image">
+            <h2>E-pit 전기차 충전소</h2>
+            <p>
+              미래에셋센터원 주차장에는 전기차 이용자들을 
+              위해 일반 충전소 외에도 E-pit 전기차 충전소가 
+              마련되어 있습니다.
+            </p>
+          </div>
+      
+          <div class="card">
+            <img src="./images/card-mobile-6.png" alt="Sparkplus Office" class="card-image">
+            <h2>주차요금 할인</h2>
+            <p>오피스,에비뉴 방문시 주차할인 혜택을 드리며 주말에는 최대 8천원으로 부담없이 미래에셋센터원을 즐길 수 있습니다.</p>
+          </div>
       </section>
 
+
+      <section class="gray-section sections">
+        <div class="header-section">
+          <h1>지금 살펴봐야할 이벤트</h1>
+          <button><img src="./images/Icon-btn+.svg" alt=""></button>
+        </div>
+        <div class="card">
+          <img src="./images/card-mobile-7.png" alt="KF Gallery" class="card-image">
+          <div class="text-gray-section">
+            <h2>미래에셋센터원 크리스마스 작은 음악회</h2>
+            <div class="ul">
+              <ul>
+                <li>공연 주제 : 재즈 공연</li>
+                <li>장소 : 1층 계단 앞(연주), 1층 크리스마스 트리 앞(다...</li>
+              </ul><br>
+              <p>2024.12.20(금)~2024.12.20(금)</p>
+            </div>
+          </div>
+        </div>
+        <div class="card border-bottom">
+          <div class="text-gray-section">
+            <h2>센터원 소식</h2>
+            <div class="ul">
+              <h3>
+                미래에셋센터원 홈페이지 리뉴얼 안내
+              </h3>
+              <p>
+                미래에셋센터원 공식 홈페이지가 리뉴얼 오픈했습니다. 더 나은 서비스 제공을 위해 불편한...
+              </p>
+              <p>2024.09.04(수)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fixed-buttons">
+        <button class="button">
+          <img src="./images/icon-appointment.svg" alt="">
+          주요 공지
+        </button>
+        <button class="button">
+          <img src="./images/icon-quick-ret.svg" alt="">
+          인터넷 예약
+        </button>
+        <button class="button">
+          <img src="./images/icon-quick-reservation.svg" alt="">
+          방문 예약
+        </button>
+        <button id="topButton" class="button" onclick="scrollToTop()">
+          <img src="./images/icon-top-menu.svg" alt="">
+        </button>
+      </div>
+      
      <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
@@ -224,6 +299,25 @@ setInterval(() => {
   updateCarousel();
 }, 5000);
 
+// Mostrar ou esconder o botão "TOP"
+window.onscroll = function() {
+  const topButton = document.getElementById("topButton");
+
+  // Mostrar o botão quando rolar para baixo e esconder quando voltar para o topo
+  if (document.documentElement.scrollTop > 200) {
+    topButton.classList.add("show");
+    topButton.classList.remove("hide");
+  } else {
+    topButton.classList.add("hide");
+    topButton.classList.remove("show");
+  }
+};
+
+
+// Função para rolar para o topo
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
     </script>
 </body>

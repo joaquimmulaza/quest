@@ -107,11 +107,14 @@ body{
 }
 
 /* Features Section */
-section {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 80px 0 0 16px;
-  }
+ .sections{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
   .convenience h1 {
     font-size: 20px;
@@ -206,6 +209,99 @@ section {
     justify-content: space-between;
     gap: 17px;
   }
+
+  .only .card-text p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #fff;
+  }
+
+  .only .card-text span{
+    color: #F58220;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+  }
+
+  .only .card{
+    border: none !important;
+  }
+
+   /*delete active hover*/
+  .only,.gray-section  .card:active{
+    background-color: transparent !important;
+  }
+
+  /*delete active hover*/
+  .only,.gray-section .card:active::before{
+    background-color: transparent;
+  }
+
+  .gray-section{
+    background-color: #ECEFF1;
+  }
+
+  .gray-section  h2,h3{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #2C2C2C;
+  }
+
+  .gray-section .card:nth-of-type(3){
+    border-bottom: 1px solid #ddd !important;
+  }
+  
+
+  .header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 320px;
+    
+  }
+
+
+  .header-section button{
+    border: none;
+    background-color: none;
+  }
+
+  .gray-section .card:nth-of-type(2) {
+    border: none !important;
+  }
+
+  .text-gray-section ul{
+    padding-left: 30px;
+  }
+
+  .text-gray-section ul li{
+    color: #979797;
+  }
+
+  .text-gray-section p {
+    color: #979797;
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+
+  .only .card h2 {
+    font-size: 20px;
+    color: #fff;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  .only .card p{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #bbb;
+  }
   
   /* Mobile-first approach (small screens) */
   @media (min-width: 768px) {
@@ -232,6 +328,61 @@ section {
       font-size: 0.95rem;
     }
   }
+
+  .fixed-buttons {
+    position: fixed;
+    right: 8px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #00427A;
+    border: 1px solid #00427A;
+    height: 56px;
+    width: 58px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .button:hover{
+    background-color: #00427A;
+    color: #fff;
+  }
+ 
+
+  #topButton {
+    opacity: 0; /* Invisível inicialmente */
+    transform: translateY(20px); /* Deslocado para baixo inicialmente */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza a aparição e o movimento */
+    position: relative; /* Necessário para o transform */
+  }
+  
+  /* Quando o botão deve aparecer */
+  #topButton.show {
+    opacity: 1; /* Totalmente visível */
+    transform: translateY(0); /* Volta à posição normal */
+  }
+  
+  /* Quando o botão está escondido */
+  #topButton.hide {
+    opacity: 0; /* Invisível */
+    transform: translateY(20px); /* Deslocado para baixo */
+  }
+  
+  button img:hover{
+    filter: saturate(255) hue-rotate(0deg) brightness(1);
+  }
+  
 
 /* Footer Styles */
 .footer {
