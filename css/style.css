@@ -336,6 +336,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 999999;
   }
   
   .button {
@@ -382,6 +383,66 @@ body{
   button img:hover{
     filter: saturate(255) hue-rotate(0deg) brightness(1);
   }
+
+  button img:active{
+    filter: saturate(255) hue-rotate(0deg) brightness(1);
+  }
+
+
+/* Estilização geral */
+
+
+ /* Configuração básica do swiper */
+ .swiper-container {
+  width: 100%;
+  height: 350px; /* Altura total do slider */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Estilo dos slides */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.swiper-wrapper{
+  align-items: center;
+}
+
+/* Slides não ativos (laterais) */
+.swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.7); /* Reduz o tamanho dos slides laterais */
+  opacity: 0.5; /* Diminui a opacidade dos slides laterais */
+  background-color: red !important;
+  height: 212px;
+}
+
+/* Slide ativo (central) */
+.swiper-slide-active {
+  width: 240px !important;
+  height: 298px !important;
+  transform: scale(1); /* Tamanho real */
+  opacity: 1; /* Totalmente visível */
+}
+
+/* Imagens no slide */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+  .swipper-section{
+    overflow: hidden;
+    background-color: #242424;
+  }
+  
   
 
 /* Footer Styles */
