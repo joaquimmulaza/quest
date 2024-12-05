@@ -332,7 +332,7 @@ body{
   .fixed-buttons {
     position: fixed;
     right: 8px;
-    bottom: 50px;
+    bottom: 30%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -499,16 +499,34 @@ body{
 
 /* Footer Styles */
 .footer {
-    text-align: center;
     background: #242424;
     color: #fff;
 }
 
-.footer_header{
+.footer_container{
+  padding-top: 18px;
   display: flex;
   flex-direction: column;
   width: 328px;
   margin: 0 auto;
+}
+
+.container {
+  width: 328px;
+  margin: 0 auto;
+}
+
+.container p{
+  font-size: 12px;
+  font-weight: 400 !important;
+}
+
+.container p:first-child{
+  padding-top: 23px;
+}
+
+.container p:last-child{
+  padding-top: 20px;
 }
 
 .title_footer{
@@ -550,11 +568,25 @@ body{
   gap: 6.16px;
 }
 
-/* Estilo da seta */
-.arrow {
-  font-size: 12px;
+.actives_mirai{
+  padding-top: 4px;
 }
-
+.actives_mirai a {
+  float: right;
+  background-attachment: fixed;
+  background: transparent;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 109px;
+  height: 36px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+}
 /* Menu suspenso escondido */
 .dropdown-menu {
   display: none;
@@ -590,7 +622,9 @@ body{
   display: block;
 }
 
-
+.onlyImgSection{
+  padding-top: 80px;
+}
 
 .sectionBackground{
   margin: 0 auto;
