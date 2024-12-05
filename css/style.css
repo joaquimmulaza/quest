@@ -396,7 +396,6 @@ body{
  .swiper-container {
   width: 100%;
   height: 350px; /* Altura total do slider */
-  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -404,9 +403,11 @@ body{
 .swiper-slide {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   overflow: hidden;
   transition: transform 0.3s, opacity 0.3s;
+  position: relative;
 }
 
 .swiper-wrapper{
@@ -417,33 +418,84 @@ body{
 .swiper-slide:not(.swiper-slide-active) {
   transform: scale(0.7); /* Reduz o tamanho dos slides laterais */
   opacity: 0.5; /* Diminui a opacidade dos slides laterais */
-  background-color: red !important;
-  height: 212px;
+  height: 100%;
+  top: 42px;
 }
 
 /* Slide ativo (central) */
 .swiper-slide-active {
   width: 240px !important;
-  height: 298px !important;
+  height: 100% !important;
   transform: scale(1); /* Tamanho real */
   opacity: 1; /* Totalmente visível */
+}
+
+.swiper-slide p { /* Espaço entre imagem e texto */
+  font-size: 18px; /* Tamanho do texto */
+  font-weight: 700;
+  text-align: left; /* Centraliza o texto */
+  color: #ffffff; /* Cor do texto */
+  position: absolute !important;
+  top: 220px;
+  z-index: 999999999999 !important;
+}
+
+.swiper-slide-active p { /* Espaço entre imagem e texto */
+  font-size: 18px; /* Tamanho do texto */
+  font-weight: 700;
+  text-align: left; /* Centraliza o texto */
+  color: #ffffff; /* Cor do texto */
+  position: absolute;
+  top: 308px;
+  z-index: 999999999999;
 }
 
 /* Imagens no slide */
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 298px;
 }
 
-
+.swiper-slide:not(.swiper-slide-active) img {
+  width: 100%;
+  height: 100%;
+  max-height: 212px; /* Limita a altura da imagem somente nos slides laterais */
+  object-fit: cover;
+}
 
   .swipper-section{
     overflow: hidden;
     background-color: #242424;
   }
+
+  .header-section-swipper{
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
-  
+  .title-section-swipper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    bottom: 10px;
+  }
+
+  .title-section-swipper h1{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    color: #fff;
+  }
+
+  .title-section-swipper span{
+    color: #F58220;
+    font-weight: 700;
+  }
 
 /* Footer Styles */
 .footer {
