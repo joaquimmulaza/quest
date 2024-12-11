@@ -249,18 +249,24 @@ body{
     color: #2C2C2C;
   }
 
-  .gray-section .card:nth-of-type(3){
+  .gray-section .card{
+    margin: 0 auto !important;
     border-bottom: 1px solid #ddd !important;
+    padding-top: 32px;
+  }
+
+  .gray-section .card p:last-child{
+    margin: 0;
+    padding-bottom: 8px;
   }
   
-
   .header-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     margin: 0 auto;
-    width: 320px;
+    width: 328px;
     
   }
 
@@ -270,9 +276,9 @@ body{
     background-color: none;
   }
 
-  .gray-section .card:nth-of-type(2) {
+  /* .gray-section .card:nth-of-type(2) {
     border: none !important;
-  }
+  } */
 
   .text-gray-section ul{
     padding-left: 30px;
@@ -393,78 +399,149 @@ body{
 
 
  /* Configuração básica do swiper */
- .swiper-container {
+ .custom-slider-1 .swiper-container {
   width: 100%;
   height: 350px; /* Altura total do slider */
-
 }
 
 /* Estilo dos slides */
-.swiper-slide {
+.custom-slider-1 .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   overflow: hidden;
   transition: transform 0.3s, opacity 0.3s;
   position: relative;
 }
 
-.swiper-wrapper{
+.custom-slider-1 .swiper-wrapper{
   align-items: center;
 }
 
+.custom-slider-2 .swiper-slide img{
+  width: 328px !important;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-swiper-slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.text-swiper-slide ul {
+  list-style-type: disc;  
+  padding: 0 0 16px 24px;
+}
+
+.text-swiper-slide ul li{
+  color: #979797;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text-swiper-slide p{
+  font-size: 12px;
+  
+}
+
+.swiper-slide{
+  overflow: hidden !important;
+  position: relative !important;
+}
+
 /* Slides não ativos (laterais) */
-.swiper-slide:not(.swiper-slide-active) {
-  transform: scale(0.7); /* Reduz o tamanho dos slides laterais */
+.custom-slider-1 .swiper-slide:not(.swiper-slide-active) {
+  /* transform: scale(0.7); Reduz o tamanho dos slides laterais */
   opacity: 0.5; /* Diminui a opacidade dos slides laterais */
   height: 100%;
-  top: 42px;
+  /* top: 42px; */
 }
 
 /* Slide ativo (central) */
-.swiper-slide-active {
+.custom-slider-1 .swiper-slide-active {
   width: 240px !important;
   height: 100% !important;
   transform: scale(1); /* Tamanho real */
   opacity: 1; /* Totalmente visível */
 }
 
-.swiper-slide p { /* Espaço entre imagem e texto */
+.custom-slider-1 .swiper-slide p { /* Espaço entre imagem e texto */
   font-size: 18px; /* Tamanho do texto */
   font-weight: 700;
   text-align: left; /* Centraliza o texto */
   color: #ffffff; /* Cor do texto */
   position: absolute !important;
-  top: 220px;
+  top: 288px;
   z-index: 999999999999 !important;
 }
 
-.swiper-slide-active p { /* Espaço entre imagem e texto */
+.custom-slider-1 .swiper-slide-active p { /* Espaço entre imagem e texto */
   font-size: 18px; /* Tamanho do texto */
   font-weight: 700;
   text-align: left; /* Centraliza o texto */
   color: #ffffff; /* Cor do texto */
   position: absolute;
-  top: 308px;
-  z-index: 999999999999;
+  top: 332px;
+  padding-bottom: 14px;
+  margin-bottom: -50px;
+  z-index: 999999999999 !important;
+  display: flex;
+  justify-content: end;
 }
 
 /* Imagens no slide */
-.swiper-slide img {
+.custom-slider-1 .swiper-slide img {
   width: 100%;
   height: 100%;
   max-height: 298px;
 }
 
-.swiper-slide:not(.swiper-slide-active) img {
+.custom-slider-1 .swiper-slide:not(.swiper-slide-active) img {
   width: 100%;
   height: 100%;
   max-height: 212px; /* Limita a altura da imagem somente nos slides laterais */
   object-fit: cover;
 }
 
-  .swipper-section{
+/* Personalização geral das setas */
+.custom-prev, .custom-next {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute !important;
+  top: 21% !important;
+  z-index: 999999999 !important;
+}
+
+
+
+.slider-2 .swiper-button-next, .swiper-button-prev{
+  background: none !important; /* Remove o background padrão */
+  color: transparent !important; /* Torna o ícone padrão invisível */
+  box-shadow: none; /* Remove qualquer sombra padrão */
+  width: auto !important;
+}
+
+
+/* Personalizar botão próximo */
+.custom-next {
+  right: -11px !important;
+}
+
+/* Efeito hover */
+.custom-prev:hover, .custom-next:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+.swipper-section{
     overflow: hidden;
     background-color: #242424;
   }
@@ -838,3 +915,5 @@ body{
 .dot.active {
   background-color: white;
 }
+
+
