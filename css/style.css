@@ -878,10 +878,144 @@ body{
 
   .cards_convenience .card h2{
     margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 64px;
+  }
+
+  .cards_convenience .card p{
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    width: 100%;
   }
 
   .section_carousel{
-    width: 100 !important;
+    width: 100% !important;
+  }
+
+  .carousel{
+    height: 135vh !important;
+  }
+
+  .text-overlay{
+    width: 80% !important;
+    margin: 0 auto;
+    justify-content: center !important;
+    gap: 280px !important;
+    display: flex !important;
+    height: 100% !important;
+  }
+
+  .text-overlay h1 {
+    font-size: 80px !important;
+    font-weight: 700 !important;
+    line-height: 80px !important;
+    width: 70%;
+  }
+
+  .description-slide{
+    margin-bottom: 0 !important;
+    gap: 40px !important;
+  }
+
+  .text-overlay .description-slide{
+    width: 70% !important;
+  }
+
+  .text-overlay .description-slide p{
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 32px !important;
+  }
+
+  .dots{
+    bottom: 80px !important;
+  }
+
+  .dot{
+    width: 32px !important;
+  }
+
+  .only {
+    flex-direction: column;
+  }
+
+  .only .card-text{
+    width: 100%;
+    padding-top: 170px;
+    margin: 0 !important;
+  }
+
+  .only .card-text h1{
+    font-size: 40px !important;
+  }
+
+  .only .card-text img{
+    width: 195.85px !important;
+  }
+
+  .only .card{
+    flex-direction: column;
+    width: 100%;
+    margin:  0 20px 0 0;
+    gap: 0 !important;
+  }
+
+  .only_desc{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100% !important;
+  }
+
+  .only_desc p {
+    font-size: 40px !important;
+    font-weight: 400 !important;
+    line-height: 64px !important;
+  }
+
+  .only_desc span{
+    color: #F58220;
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    line-height: 64px;
+  }
+
+  .only_cards{
+    display: flex;
+    width: 100% !important;
+  }
+
+  .only .card-image {
+    width: 100%;
+    padding-top: 80px;
+    margin-bottom: 40px !important;
+  }
+
+  .only_cards h2{
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    line-height: 48px !important;
+  }
+
+  .only_cards p {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 28px !important;
+    width: 92%;
+  }
+
+  .only .card:hover::before{
+    background-color: transparent !important;
+  }
+
+  .only .card:hover{
+    position: relative;
+    bottom: 40px !important;
+  }
+  .only .card:hover p{
+    color: #fff !important;
   }
   
 }
