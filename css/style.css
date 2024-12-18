@@ -795,6 +795,14 @@ body{
     .container-hero{
         gap: 8px !important;
     }
+
+    .gray-section .card{
+      padding-top: 0 !important;
+    }
+
+    .header-section {
+      padding-bottom: 24px;
+    }
 }
 
 @media (min-width: 1281px) {
@@ -1024,6 +1032,30 @@ body{
   }
   .only .card:hover p{
     color: #fff !important;
+  }
+
+  .card_gray_section{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 100%;
+  }
+
+  .gray-section .card{
+   
+    background-color: red;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .border-bottom{
+    background-color: blue;
+  }
+
+  .header-section{
+    margin: 0 !important;
   }
   
 }
